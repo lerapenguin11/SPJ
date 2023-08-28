@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/icon_app"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_app" />
+
+        <TextView
+            android:id="@+id/title_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:fontFamily="@font/inter_extrabold"
+            android:text="@string/spj"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_app"
+            app:layout_constraintStart_toEndOf="@+id/icon_app"
+            app:layout_constraintTop_toTopOf="@+id/icon_app"
+            app:layout_constraintVertical_bias="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/icon_app">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="5dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="5dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="4dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="4dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:text="@string/sport_professional"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="4dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="4dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="5dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="5dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_top" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

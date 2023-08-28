@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.HomeFragment">
+
+   <include
+       android:id="@+id/include"
+       layout="@layout/content_toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <View
+       android:id="@+id/view"
+       android:layout_width="0dp"
+       android:layout_height="2dp"
+       android:layout_marginStart="24dp"
+       android:layout_marginEnd="24dp"
+       android:background="#1B1B1B"
+       android:layout_marginTop="20dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/include" />
+
+   <ImageView
+       android:id="@+id/icon_home"
+       android:layout_width="wrap_content"
+       android:layout_height="190dp"
+       android:layout_marginTop="20dp"
+       android:preserveLegacyExternalStorage="true"
+       android:requestLegacyExternalStorage="true"
+       android:scaleType="fitXY"
+       android:src="@drawable/icon_home"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/view" />
+
+   <View
+       android:id="@+id/view1"
+       android:layout_width="0dp"
+       android:layout_height="2dp"
+       android:layout_marginStart="24dp"
+       android:layout_marginTop="20dp"
+       android:layout_marginEnd="24dp"
+       android:background="#1B1B1B"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/icon_home" />
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       app:layout_constraintTop_toBottomOf="@+id/view1">
+
+      <LinearLayout
+          android:id="@+id/linearLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nav_football"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_home_menu"
+                android:elevation="7dp">
+
+               <TextView
+                   android:id="@+id/tv_nav_football"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:fontFamily="@font/inter_medium"
+                   android:text="@string/football"
+                   android:textColor="@color/black"
+                   app:layout_constraintBottom_toBottomOf="@+id/ic_nav_football"
+                   app:layout_constraintStart_toEndOf="@+id/ic_nav_football"
+                   app:layout_constraintTop_toTopOf="@+id/ic_nav_football" />
+
+               <ImageView
+                   android:id="@+id/ic_nav_football"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_marginStart="10dp"
+                   android:src="@drawable/ic_football"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nav_tennis"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_home_menu"
+                android:elevation="7dp">
+
+               <TextView
+                   android:id="@+id/tv_nav_tennis"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:fontFamily="@font/inter_medium"
+                   android:text="@string/tennis"
+                   android:textColor="@color/black"
+                   app:layout_constraintBottom_toBottomOf="@+id/ic_nav_tennis"
+                   app:layout_constraintStart_toEndOf="@+id/ic_nav_tennis"
+                   app:layout_constraintTop_toTopOf="@+id/ic_nav_tennis" />
+
+               <ImageView
+                   android:id="@+id/ic_nav_tennis"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_marginStart="15dp"
+                   android:src="@drawable/ic_tennis"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="horizontal"
+             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nav_basketball"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_home_menu"
+                android:elevation="7dp">
+
+               <TextView
+                   android:id="@+id/tv_nav_basketball"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:fontFamily="@font/inter_medium"
+                   android:text="@string/basketball"
+                   android:textColor="@color/black"
+                   app:layout_constraintBottom_toBottomOf="@+id/ic_nav_basketball"
+                   app:layout_constraintStart_toEndOf="@+id/ic_nav_basketball"
+                   app:layout_constraintTop_toTopOf="@+id/ic_nav_basketball" />
+
+               <ImageView
+                   android:id="@+id/ic_nav_basketball"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_marginStart="15dp"
+                   android:src="@drawable/ic_basketball"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nav_baseball"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_home_menu"
+                android:elevation="7dp">
+
+               <TextView
+                   android:id="@+id/tv_nav_baseball"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:fontFamily="@font/inter_medium"
+                   android:text="@string/baseball"
+                   android:textColor="@color/black"
+                   app:layout_constraintBottom_toBottomOf="@+id/ic_nav_baseball"
+                   app:layout_constraintStart_toEndOf="@+id/ic_nav_baseball"
+                   app:layout_constraintTop_toTopOf="@+id/ic_nav_baseball" />
+
+               <ImageView
+                   android:id="@+id/ic_nav_baseball"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_marginStart="15dp"
+                   android:src="@drawable/ic_baseball"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+         </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/linearLayout2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nav_champions"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_home_menu"
+                android:elevation="7dp">
+
+               <TextView
+                   android:id="@+id/tv_nav_champions"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:fontFamily="@font/inter_medium"
+                   android:text="Champions"
+                   android:textColor="@color/black"
+                   app:layout_constraintBottom_toBottomOf="@+id/ic_nav_champions"
+                   app:layout_constraintStart_toEndOf="@+id/ic_nav_champions"
+                   app:layout_constraintTop_toTopOf="@+id/ic_nav_champions" />
+
+               <ImageView
+                   android:id="@+id/ic_nav_champions"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_marginStart="15dp"
+                   android:src="@drawable/ic_trophy"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nav_settings"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_home_menu"
+                android:elevation="7dp">
+
+               <TextView
+                   android:id="@+id/tv_nav_settings"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:fontFamily="@font/inter_medium"
+                   android:text="@string/settings"
+                   android:textColor="@color/black"
+                   app:layout_constraintBottom_toBottomOf="@+id/ic_nav_settings"
+                   app:layout_constraintStart_toEndOf="@+id/ic_nav_settings"
+                   app:layout_constraintTop_toTopOf="@+id/ic_nav_settings" />
+
+               <ImageView
+                   android:id="@+id/ic_nav_settings"
+                   android:layout_width="40dp"
+                   android:layout_height="40dp"
+                   android:layout_marginStart="15dp"
+                   android:src="@drawable/ic_cogwheel"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_gravity="center_vertical"
+             android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+               <androidx.cardview.widget.CardView
+                   android:id="@+id/fon"
+                   android:layout_width="match_parent"
+                   android:layout_height="155dp"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginStart="16dp"
+                   android:layout_marginEnd="16dp"
+                   android:layout_marginBottom="30dp"
+                   android:background="@drawable/bg_home_menu"
+                   android:innerRadius="0dp"
+                   android:shape="ring"
+                   android:thicknessRatio="1.9"
+                   app:cardCornerRadius="10dp"
+                   app:cardElevation="7dp"
+                   app:cardPreventCornerOverlap="false"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                  <androidx.cardview.widget.CardView
+                      android:layout_width="match_parent"
+                      android:layout_height="155dp"
+                      android:background="@drawable/bg_home_menu"
+                      app:cardCornerRadius="10dp"
+                      app:cardPreventCornerOverlap="false">
+
+                     <androidx.constraintlayout.widget.ConstraintLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:background="@drawable/bg_transparent_effect">
+
+                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                     <ImageView
+                         android:id="@+id/ic_icon_quiz"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:preserveLegacyExternalStorage="true"
+                         android:requestLegacyExternalStorage="true"
+                         android:scaleType="fitXY"
+                         android:src="@drawable/icon_home" />
+                  </androidx.cardview.widget.CardView>
+               </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+         </LinearLayout>
+
+
+      </LinearLayout>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
