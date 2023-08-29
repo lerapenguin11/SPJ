@@ -117,7 +117,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_page"
-            android:layout_width="170dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -129,170 +129,186 @@
             tools:listitem="@layout/item_page" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
+        android:id="@+id/scrollView_all_news"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingStart="28dp"
-        android:paddingEnd="28dp"
-        android:paddingTop="15dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view1">
 
-
-        <ImageView
-            android:id="@+id/ic_top_news"
-            android:layout_width="wrap_content"
-            android:layout_height="180dp"
-            android:preserveLegacyExternalStorage="true"
-            android:requestLegacyExternalStorage="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_defolt_news"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_title_top_news"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Bayern officially land Carsen Edwards"
-            android:fontFamily="@font/inter_extrabold"
-            android:textColor="@color/black"
-            android:textSize="13sp"
-            android:justificationMode="inter_word"
-            app:layout_constraintEnd_toEndOf="@+id/ic_top_news"
-            app:layout_constraintStart_toStartOf="@+id/ic_top_news"
-            app:layout_constraintTop_toBottomOf="@+id/ic_top_news" />
-
-        <TextView
-            android:id="@+id/tv_desc_top_news"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Carsen Edwards becomes the newest addition to new Pablo Laso's project at FC Bayern Munich with a one-year deal and completes the team's guard rotation, according to the official information."
-            android:textSize="11sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/inter_medium"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_title_top_news"
-            app:layout_constraintStart_toStartOf="@+id/tv_title_top_news"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title_top_news" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
+        <LinearLayout
+            android:id="@+id/innerLinearLayout_all_news"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_desc_top_news">
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_group"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="28dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="28dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/view1">
 
-            <TextView
-                android:id="@+id/tv_tag_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter_medium"
-                android:text="@string/basketball"
-                android:textColor="#F09A3C"
-                android:textSize="11sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                app:layout_constraintHorizontal_bias="0.257"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_tag_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter_medium"
-                android:text="@string/basketball"
-                android:textColor="#F09A3C"
-                android:textSize="11sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                app:layout_constraintHorizontal_bias="0.73"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/ic_top_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="180dp"
+                    android:preserveLegacyExternalStorage="true"
+                    android:requestLegacyExternalStorage="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_defolt_news"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_title_top_news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_top_news"
+                    app:layout_constraintStart_toStartOf="@+id/ic_top_news"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_top_news"
+                    tools:text="Bayern officially land Carsen Edwards" />
 
-        <TextView
-            android:id="@+id/tv_news_paragraph1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Larentzakis, 29, appeared in 41 EuroLeague games last season and averaged 6.4 points, 1.8 rebounds, 1.0 assists, and 4.8 PIR over 14 minutes per contest while shooting 49.2% from RANDOM NEWS DELETE ME beyond the arc.
-He helped the Reds to reach the EuroLeague Final Four and secure the second spot, also winning the Greek championship and cup competition."
-            android:textSize="11sp"
-            android:layout_marginTop="5dp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/inter_medium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+                <TextView
+                    android:id="@+id/tv_desc_top_news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_title_top_news"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title_top_news"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title_top_news"
+                    tools:text="Carsen Edwards becomes the newest addition to new Pablo Laso's project at FC Bayern Munich with a one-year deal and completes the team's guard rotation, according to the official information." />
 
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:weightSum="1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_news_paragraph1">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_desc_top_news">
 
-            <ImageView
-                android:id="@+id/ic_news_2"
-                android:layout_width="160dp"
-                android:layout_height="90dp"
-                android:preserveLegacyExternalStorage="true"
-                android:requestLegacyExternalStorage="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_defolt_news" />
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_group"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_news_paragraph2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/inter_medium"
-                android:paddingStart="10dp"
-                android:text="According to Konstantinos Melayess from Gazzetta.gr, his total earnings will reach €1.8 million in net.
-The Greek sharpshooter previously had one year left on his deal."
-                android:textColor="@color/black"
-                android:textSize="11sp"
-                app:layout_constraintTop_toTopOf="@+id/ic_news_2" />
+                    <TextView
+                        android:id="@+id/tv_tag_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:textColor="#F09A3C"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                        app:layout_constraintHorizontal_bias="0.257"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/basketball" />
+
+                    <TextView
+                        android:id="@+id/tv_tag_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:textColor="#F09A3C"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                        app:layout_constraintHorizontal_bias="0.73"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/basketball" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_news_paragraph1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+                    tools:text="Larentzakis, 29, appeared in 41 EuroLeague games last season and averaged 6.4 points, 1.8 rebounds, 1.0 assists, and 4.8 PIR over 14 minutes per contest while shooting 49.2% from RANDOM NEWS DELETE ME beyond the arc.
+He helped the Reds to reach the EuroLeague Final Four and secure the second spot, also winning the Greek championship and cup competition." />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_news_paragraph1">
+
+                    <ImageView
+                        android:id="@+id/ic_news_2"
+                        android:layout_width="160dp"
+                        android:layout_height="90dp"
+                        android:preserveLegacyExternalStorage="true"
+                        android:requestLegacyExternalStorage="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_defolt_news" />
+
+                    <TextView
+                        android:id="@+id/tv_news_paragraph2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_medium"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        app:layout_constraintTop_toTopOf="@+id/ic_news_2"
+                        tools:text="According to Konstantinos Melayess from Gazzetta.gr, his total earnings will reach €1.8 million in net.
+The Greek sharpshooter previously had one year left on his deal." />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_news_paragraph3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                    tools:text="Larentzakis, 29, appeared in 41 EuroLeague games last season and averaged 6.4 points, 1.8 rebounds, 1.0 assists, and 4.8 PIR over 14 minutes per contest while shooting 49.2% from mid-range and 37.2% from beyond the arc.
+He helped the Reds to reach the EuroLeague Final Four and secure the second spot, also winning the Greek championship and cup competition." />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
+    </ScrollView>
 
-        <TextView
-            android:id="@+id/tv_news_paragraph3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Larentzakis, 29, appeared in 41 EuroLeague games last season and averaged 6.4 points, 1.8 rebounds, 1.0 assists, and 4.8 PIR over 14 minutes per contest while shooting 49.2% from mid-range and 37.2% from beyond the arc.
-He helped the Reds to reach the EuroLeague Final Four and secure the second spot, also winning the Greek championship and cup competition."
-            android:layout_marginTop="10dp"
-            android:textSize="11sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/inter_medium"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
