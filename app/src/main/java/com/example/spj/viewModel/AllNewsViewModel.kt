@@ -18,4 +18,31 @@ class AllNewsViewModel : ViewModel() {
 
         return mutableData
     }
+
+    fun getResultFootball() : LiveData<MutableList<NewsModel>>{
+        val mutableData = MutableLiveData<MutableList<NewsModel>>()
+        repository.getFootballListReading().observeForever {list ->
+            mutableData.value = list
+        }
+
+        return mutableData
+    }
+
+    fun getResultTennis() : LiveData<MutableList<NewsModel>>{
+        val mutableData = MutableLiveData<MutableList<NewsModel>>()
+        repository.getTennisListReading().observeForever {list ->
+            mutableData.value = list
+        }
+
+        return mutableData
+    }
+
+    fun getResultBaseball() : LiveData<MutableList<NewsModel>>{
+        val mutableData = MutableLiveData<MutableList<NewsModel>>()
+        repository.getBaseballListReading().observeForever {list ->
+            mutableData.value = list
+        }
+
+        return mutableData
+    }
 }

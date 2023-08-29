@@ -31,7 +31,7 @@ class PageAdapter(val listener : PageListener) : RecyclerView.Adapter<PageAdapte
 
         holder.pageNumber.text = page.page.toString()
 
-        if (position == selectedItem) {
+        if (selectedItem == page.id) {
             holder.itemView.setBackgroundResource(R.drawable.bg_page_click)
             holder.pageNumber.setTextColor(Color.WHITE)
         } else {
@@ -39,9 +39,9 @@ class PageAdapter(val listener : PageListener) : RecyclerView.Adapter<PageAdapte
             holder.pageNumber.setTextColor(Color.BLACK)
         }
 
-
         holder.itemView.setOnClickListener {
             selectedItem = position
+            selectedItem = page.id
             notifyDataSetChanged()
             listener.pageList(page)
         }
