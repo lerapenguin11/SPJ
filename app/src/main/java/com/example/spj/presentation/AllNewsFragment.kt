@@ -15,6 +15,7 @@ import com.example.spj.business.models.NewsModel
 import com.example.spj.databinding.FragmentAllNewsBinding
 import com.example.spj.presentation.adapter.PageAdapter
 import com.example.spj.presentation.adapter.listener.PageListener
+import com.example.spj.utilits.replaceFragmentMainActivitySPJ
 import com.example.spj.viewModel.AllNewsViewModel
 
 class AllNewsFragment : Fragment(), PageListener {
@@ -49,6 +50,9 @@ class AllNewsFragment : Fragment(), PageListener {
     }
 
     private fun onClick() {
+        binding.icArrow.setOnClickListener {
+            replaceFragmentMainActivitySPJ(HomeFragment())
+        }
         binding.tvNavFootball.setOnClickListener {
             checkFootball = true
             checkBasketball = false

@@ -28,5 +28,13 @@ class HomeFragment : Fragment() {
         binding.navAllNews.setOnClickListener {
             replaceFragmentMainActivitySPJ(AllNewsFragment())
         }
+
+        binding.navFootball.setOnClickListener {
+            replaceFragmentMainActivitySPJ(FootballFragment())
+        }
+
+        binding.navTennis.setOnClickListener {
+
+        }
     }
 }

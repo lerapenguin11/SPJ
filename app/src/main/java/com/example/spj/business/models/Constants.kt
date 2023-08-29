@@ -47,7 +47,7 @@ object Constants{
             "")
         footballNewsList.add(news2)
 
-        val news3 = NewsModel(2, 3,"", "TEST_FOOTBALL_PAGE 2", "Carsen Edwards becomes the newest addition to new Pablo Laso's project at FC Bayern Munich with a one-year deal and completes the team's guard rotation, according to the official information.",
+        val news3 = NewsModel(2, 3,"", "TEST_FOOTBALL_PAGE 3", "Carsen Edwards becomes the newest addition to new Pablo Laso's project at FC Bayern Munich with a one-year deal and completes the team's guard rotation, according to the official information.",
             "Basketball", "Larentzakis, 29, appeared in 41 EuroLeague games last season and averaged 6.4 points, 1.8 rebounds, 1.0 assists, and 4.8 PIR over 14 minutes per contest while shooting 49.2% from RANDOM NEWS DELETE ME beyond the arc.\n" +
                     "He helped the Reds to reach the EuroLeague Final Four and secure the second spot, also winning the Greek championship and cup competition.",
             "According to Konstantinos Melayess from Gazzetta.gr, his total earnings will reach €1.8 million in net.\n" +
