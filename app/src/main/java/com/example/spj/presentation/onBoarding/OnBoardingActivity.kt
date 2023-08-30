@@ -28,20 +28,20 @@ class OnBoardingActivity : AppCompatActivity() {
     }
 
     private fun setViewPager() {
-        val fragmentList = ArrayList<Fragment>()
-        fragmentList.add(ThirstStartFragment())
-        fragmentList.add(SecondFragment())
-        val adapterViewPager = OnBoardingAdapter(
-            fragmentList,
+        val fragList = ArrayList<Fragment>()
+        fragList.add(ThirstStartFragment())
+        fragList.add(SecondFinishFragment())
+        val adapterVP = OnBoardingAdapter(
+            fragList,
             this.supportFragmentManager,
             lifecycle
         )
-        val viewPager = findViewById<ViewPager2>(R.id.view_pager)
-        viewPager.adapter = adapterViewPager
+        val vr = findViewById<ViewPager2>(R.id.view_pager)
+        vr.adapter = adapterVP
         val indicator = findViewById<DotsIndicator>(R.id.dots_indicator)
-        indicator.attachTo(viewPager)
-        val finish = findViewById<ImageView>(R.id.finish)
-        finish.setOnClickListener { v: View? ->
+        indicator.attachTo(vr)
+        val close = findViewById<ImageView>(R.id.finish)
+        close.setOnClickListener { v: View? ->
             val intent = Intent(
                 this@OnBoardingActivity,
                 MainActivity::class.java
@@ -61,6 +61,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
             window.statusBarColor = ContextCompat.getColor(activity,android.R.color.transparent)
             window.setBackgroundDrawable(background)
+            val indicator = findViewById<DotsIndicator>(R.id.dots_indicator)
         }
     }
 }

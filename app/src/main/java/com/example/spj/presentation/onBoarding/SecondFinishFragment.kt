@@ -8,19 +8,18 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.example.spj.R
 
-class ThirstStartFragment : Fragment() {
+class SecondFinishFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_thirst_start, container, false)
+        return inflater.inflate(R.layout.fragment_second, container, false)
     }
 
     override fun onResume() {
         super.onResume()
         val test = requireView().findViewById<TextView>(R.id.textView)
-        val test1 = requireView().findViewById<TextView>(R.id.textView3)
+        val test2 = requireView().findViewById<TextView>(R.id.textView3)
     }
 }
