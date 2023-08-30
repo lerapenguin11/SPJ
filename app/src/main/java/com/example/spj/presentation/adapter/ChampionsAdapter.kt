@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.spj.R
 import com.example.spj.business.models.ChampionsModel
 import com.example.spj.business.models.NewsModel
@@ -28,6 +29,10 @@ class ChampionsAdapter : RecyclerView.Adapter<ChampionsAdapter.ChampionsViewHold
 
         holder.countTop.text = champions.countTop
         holder.name.text = champions.name
+        Glide.with(holder.itemView)
+            .load(champions.flag)
+            .override(92, 92)
+            .into(holder.flag)
     }
 
     @SuppressLint("NotifyDataSetChanged")

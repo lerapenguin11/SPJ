@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.spj.business.models.NewsModel
 import com.example.spj.databinding.FragmentFootballBinding
 import com.example.spj.presentation.adapter.PageAdapter
@@ -56,6 +57,13 @@ class FootballFragment : Fragment(), PageListener {
             binding.tvNewsParagraph1.text = football.get(position).paragraph_1
             binding.tvNewsParagraph2.text = football.get(position).paragraph_2
             binding.tvNewsParagraph3.text = football.get(position).paragraph_3
+            Glide.with(requireContext())
+                .load(football.get(position).iconTop)
+                .into(binding.icTopNews)
+            Glide.with(requireContext())
+                .load(football.get(position).iconParagraph)
+                .override(160, 90)
+                .into(binding.icNews2)
         })
     }
 

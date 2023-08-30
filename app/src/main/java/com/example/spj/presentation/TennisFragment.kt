@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.spj.R
 import com.example.spj.business.models.NewsModel
 import com.example.spj.databinding.FragmentTennisBinding
@@ -49,14 +50,21 @@ class TennisFragment : Fragment(), PageListener {
     }
 
     private fun observeDataTennis(position: Int) {
-        allNewsViewModel.getResultTennis().observe(viewLifecycleOwner, Observer {football ->
-            binding.tvTitleTopNews.text = football.get(position).title
-            binding.tvDescTopNews.text = football.get(position).descTop
-            binding.tvTag1.text = football.get(position).tag
-            binding.tvTag2.text = football.get(position).tag
-            binding.tvNewsParagraph1.text = football.get(position).paragraph_1
-            binding.tvNewsParagraph2.text = football.get(position).paragraph_2
-            binding.tvNewsParagraph3.text = football.get(position).paragraph_3
+        allNewsViewModel.getResultTennis().observe(viewLifecycleOwner, Observer {tennis ->
+            binding.tvTitleTopNews.text = tennis.get(position).title
+            binding.tvDescTopNews.text = tennis.get(position).descTop
+            binding.tvTag1.text = tennis.get(position).tag
+            binding.tvTag2.text = tennis.get(position).tag
+            binding.tvNewsParagraph1.text = tennis.get(position).paragraph_1
+            binding.tvNewsParagraph2.text = tennis.get(position).paragraph_2
+            binding.tvNewsParagraph3.text = tennis.get(position).paragraph_3
+            Glide.with(requireContext())
+                .load(tennis.get(position).iconTop)
+                .into(binding.icTopNews)
+            Glide.with(requireContext())
+                .load(tennis.get(position).iconParagraph)
+                .override(160, 90)
+                .into(binding.icNews2)
         })
     }
 

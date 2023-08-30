@@ -10,6 +10,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.spj.R
 import com.example.spj.business.models.NewsModel
 import com.example.spj.databinding.FragmentAllNewsBinding
@@ -98,14 +99,21 @@ class AllNewsFragment : Fragment(), PageListener {
     }
 
     private fun observeDataBaseball(position: Int){
-        allNewsViewModel.getResultBaseball().observe(viewLifecycleOwner, Observer {tennis ->
-            binding.tvTitleTopNews.text = tennis.get(position).title
-            binding.tvDescTopNews.text = tennis.get(position).descTop
-            binding.tvTag1.text = tennis.get(position).tag
-            binding.tvTag2.text = tennis.get(position).tag
-            binding.tvNewsParagraph1.text = tennis.get(position).paragraph_1
-            binding.tvNewsParagraph2.text = tennis.get(position).paragraph_2
-            binding.tvNewsParagraph3.text = tennis.get(position).paragraph_3
+        allNewsViewModel.getResultBaseball().observe(viewLifecycleOwner, Observer {baseball ->
+            binding.tvTitleTopNews.text = baseball.get(position).title
+            binding.tvDescTopNews.text = baseball.get(position).descTop
+            binding.tvTag1.text = baseball.get(position).tag
+            binding.tvTag2.text = baseball.get(position).tag
+            binding.tvNewsParagraph1.text = baseball.get(position).paragraph_1
+            binding.tvNewsParagraph2.text = baseball.get(position).paragraph_2
+            binding.tvNewsParagraph3.text = baseball.get(position).paragraph_3
+            Glide.with(requireContext())
+                .load(baseball.get(position).iconTop)
+                .into(binding.icTopNews)
+            Glide.with(requireContext())
+                .load(baseball.get(position).iconParagraph)
+                .override(160, 90)
+                .into(binding.icNews2)
         })
     }
 
@@ -127,6 +135,13 @@ class AllNewsFragment : Fragment(), PageListener {
             binding.tvNewsParagraph1.text = tennis.get(position).paragraph_1
             binding.tvNewsParagraph2.text = tennis.get(position).paragraph_2
             binding.tvNewsParagraph3.text = tennis.get(position).paragraph_3
+            Glide.with(requireContext())
+                .load(tennis.get(position).iconTop)
+                .into(binding.icTopNews)
+            Glide.with(requireContext())
+                .load(tennis.get(position).iconParagraph)
+                .override(160, 90)
+                .into(binding.icNews2)
         })
     }
 
@@ -148,6 +163,13 @@ class AllNewsFragment : Fragment(), PageListener {
             binding.tvNewsParagraph1.text = football.get(position).paragraph_1
             binding.tvNewsParagraph2.text = football.get(position).paragraph_2
             binding.tvNewsParagraph3.text = football.get(position).paragraph_3
+            Glide.with(requireContext())
+                .load(football.get(position).iconTop)
+                .into(binding.icTopNews)
+            Glide.with(requireContext())
+                .load(football.get(position).iconParagraph)
+                .override(160, 90)
+                .into(binding.icNews2)
         })
     }
 
@@ -169,6 +191,13 @@ class AllNewsFragment : Fragment(), PageListener {
             binding.tvNewsParagraph1.text = basketball.get(position).paragraph_1
             binding.tvNewsParagraph2.text = basketball.get(position).paragraph_2
             binding.tvNewsParagraph3.text = basketball.get(position).paragraph_3
+            Glide.with(requireContext())
+                .load(basketball.get(position).iconTop)
+                .into(binding.icTopNews)
+            Glide.with(requireContext())
+                .load(basketball.get(position).iconParagraph)
+                .override(160, 90)
+                .into(binding.icNews2)
         })
     }
 

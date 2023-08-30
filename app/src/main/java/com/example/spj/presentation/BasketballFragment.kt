@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.example.spj.R
 import com.example.spj.business.models.NewsModel
 import com.example.spj.databinding.FragmentBasketballBinding
@@ -50,14 +51,21 @@ class BasketballFragment : Fragment(), PageListener {
     }
 
     private fun observeDataBasketball(position: Int) {
-        allNewsViewModel.getResultBasketball().observe(viewLifecycleOwner, Observer {football ->
-            binding.tvTitleTopNews.text = football.get(position).title
-            binding.tvDescTopNews.text = football.get(position).descTop
-            binding.tvTag1.text = football.get(position).tag
-            binding.tvTag2.text = football.get(position).tag
-            binding.tvNewsParagraph1.text = football.get(position).paragraph_1
-            binding.tvNewsParagraph2.text = football.get(position).paragraph_2
-            binding.tvNewsParagraph3.text = football.get(position).paragraph_3
+        allNewsViewModel.getResultBasketball().observe(viewLifecycleOwner, Observer {basketball ->
+            binding.tvTitleTopNews.text = basketball.get(position).title
+            binding.tvDescTopNews.text = basketball.get(position).descTop
+            binding.tvTag1.text = basketball.get(position).tag
+            binding.tvTag2.text = basketball.get(position).tag
+            binding.tvNewsParagraph1.text = basketball.get(position).paragraph_1
+            binding.tvNewsParagraph2.text = basketball.get(position).paragraph_2
+            binding.tvNewsParagraph3.text = basketball.get(position).paragraph_3
+            Glide.with(requireContext())
+                .load(basketball.get(position).iconTop)
+                .into(binding.icTopNews)
+            Glide.with(requireContext())
+                .load(basketball.get(position).iconParagraph)
+                .override(160, 90)
+                .into(binding.icNews2)
         })
     }
 
