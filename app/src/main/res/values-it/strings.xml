@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SPJ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Ciao frammento vuoto</string>
+    <string name="spj">SPJ</string>
+    <string name="sport_professional">Professionista dello sport</string>
+    <string name="football">Calcio</string>
+    <string name="tennis">Tennis</string>
+    <string name="basketball">Pallacanestro</string>
+    <string name="baseball">Baseball</string>
+    <string name="settings">Impostazioni</string>
+    <string name="_basketball">-Pallacanestro</string>
+    <string name="_football">-Calcio</string>
+    <string name="_tennis">-Tennis</string>
+    <string name="_baseball">-Baseball</string>
+    <string name="go_to_the_sections_of_interest_and_follow_the_sports_news_in_real_time">Vai nelle sezioni di interesse e segui le notizie sportive in tempo reale</string>
+    <string name="you_can_also_see_the_top_best_players_of_2023_tennis_basketball_baseball_and_football">Puoi anche vedere i migliori giocatori del 2023: tennis, basket, baseball e calcio</string>
+    <string name="if_you_want_to_read_all_the_sports_news_of_the_week_then_click_on_the_rectangle_in_the_navigation_bar">Se vuoi leggere tutte le notizie sportive della settimana, clicca sul rettangolo nella barra di navigazione</string>
+    <string name="also_to_make_it_convenient_for_you_to_read_the_news_at_any_time_of_the_day_we_have_made_a_theme_change_function">Inoltre, per renderti comodo leggere le notizie in qualsiasi momento della giornata, abbiamo creato una funzione di cambio tema</string>
+</resources>

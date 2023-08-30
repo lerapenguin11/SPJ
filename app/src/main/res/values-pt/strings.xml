@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SPJ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Olá fragmento em branco</string>
+    <string name="spj">SPJ</string>
+    <string name="sport_professional">Profissional Esportivo</string>
+    <string name="football">Futebol</string>
+    <string name="tennis">tênis</string>
+    <string name="basketball">Basquetebol</string>
+    <string name="baseball">Beisebol</string>
+    <string name="settings">Configurações</string>
+    <string name="_basketball">-Basquetebol</string>
+    <string name="_football">-Futebol</string>
+    <string name="_tennis">-Tênis</string>
+    <string name="_baseball">-Beisebol</string>
+    <string name="go_to_the_sections_of_interest_and_follow_the_sports_news_in_real_time">Acesse as seções de interesse e acompanhe as notícias esportivas em tempo real</string>
+    <string name="you_can_also_see_the_top_best_players_of_2023_tennis_basketball_baseball_and_football">Você também pode ver os melhores jogadores de 2023: tênis, basquete, beisebol e futebol</string>
+    <string name="if_you_want_to_read_all_the_sports_news_of_the_week_then_click_on_the_rectangle_in_the_navigation_bar">Se quiser ler todas as notícias esportivas da semana, clique no retângulo da barra de navegação</string>
+    <string name="also_to_make_it_convenient_for_you_to_read_the_news_at_any_time_of_the_day_we_have_made_a_theme_change_function">Além disso, para facilitar a leitura das notícias a qualquer hora do dia, criamos uma função de mudança de tema</string>
+</resources>
