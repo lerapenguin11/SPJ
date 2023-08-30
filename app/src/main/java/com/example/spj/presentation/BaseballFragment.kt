@@ -8,15 +8,17 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.spj.R
 import com.example.spj.business.models.NewsModel
-import com.example.spj.databinding.FragmentFootballBinding
+import com.example.spj.databinding.FragmentBaseballBinding
+import com.example.spj.databinding.FragmentBasketballBinding
 import com.example.spj.presentation.adapter.PageAdapter
 import com.example.spj.presentation.adapter.listener.PageListener
 import com.example.spj.utilits.replaceFragmentMainActivitySPJ
 import com.example.spj.viewModel.AllNewsViewModel
 
-class FootballFragment : Fragment(), PageListener {
-    private var _binding : FragmentFootballBinding? = null
+class BaseballFragment : Fragment(), PageListener {
+    private var _binding : FragmentBaseballBinding? = null
     private val binding get() = _binding!!
     private lateinit var allNewsViewModel : AllNewsViewModel
     private var position = 0
@@ -27,7 +29,7 @@ class FootballFragment : Fragment(), PageListener {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFootballBinding.inflate(inflater, container, false)
+        _binding = FragmentBaseballBinding.inflate(inflater, container, false)
 
         allNewsViewModel = ViewModelProvider(requireActivity()).get(AllNewsViewModel::class.java)
 
@@ -36,8 +38,8 @@ class FootballFragment : Fragment(), PageListener {
 
     override fun onResume() {
         super.onResume()
-        setPageFootball()
-        observeDataFootball(position)
+        setPageBaseball()
+        observeDataBaseball(position)
         onClick()
     }
 
@@ -47,8 +49,8 @@ class FootballFragment : Fragment(), PageListener {
         }
     }
 
-    private fun observeDataFootball(position: Int) {
-        allNewsViewModel.getResultFootball().observe(viewLifecycleOwner, Observer {football ->
+    private fun observeDataBaseball(position: Int) {
+        allNewsViewModel.getResultBaseball().observe(viewLifecycleOwner, Observer {football ->
             binding.tvTitleTopNews.text = football.get(position).title
             binding.tvDescTopNews.text = football.get(position).descTop
             binding.tvTag1.text = football.get(position).tag
@@ -59,17 +61,17 @@ class FootballFragment : Fragment(), PageListener {
         })
     }
 
-    private fun setPageFootball() {
+    private fun setPageBaseball() {
         binding.rvPage.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rvPage.adapter = adapter
 
-        allNewsViewModel.getResultFootball().observe(viewLifecycleOwner, Observer {
+        allNewsViewModel.getResultBaseball().observe(viewLifecycleOwner, Observer {
             adapter.setItem(it)
         })
     }
 
     override fun pageList(page: NewsModel) {
         position = page.id
-        observeDataFootball(position = position)
+        observeDataBaseball(position = position)
     }
 }

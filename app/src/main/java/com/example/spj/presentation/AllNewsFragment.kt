@@ -181,8 +181,8 @@ class AllNewsFragment : Fragment(), PageListener {
         })
     }
 
-    override fun pageList(quiz: NewsModel) {
-        position = quiz.id
+    override fun pageList(page: NewsModel) {
+        position = page.id
         if (checkFootball){
             observeDataFootball(position = position)
         }

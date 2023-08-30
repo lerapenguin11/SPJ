@@ -4,5 +4,5 @@ import com.example.spj.business.models.NewsModel
 
 interface PageListener {
 
-    fun pageList(quiz : NewsModel)
+    fun pageList(page : NewsModel)
 }

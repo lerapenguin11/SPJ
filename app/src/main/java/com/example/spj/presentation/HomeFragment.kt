@@ -34,7 +34,19 @@ class HomeFragment : Fragment() {
         }
 
         binding.navTennis.setOnClickListener {
+            replaceFragmentMainActivitySPJ(TennisFragment())
+        }
 
+        binding.navBasketball.setOnClickListener {
+            replaceFragmentMainActivitySPJ(BasketballFragment())
+        }
+
+        binding.navBaseball.setOnClickListener {
+            replaceFragmentMainActivitySPJ(BaseballFragment())
+        }
+
+        binding.navChampions.setOnClickListener {
+            replaceFragmentMainActivitySPJ(ChampionsFragment())
         }
     }
 }

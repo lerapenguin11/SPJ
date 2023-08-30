@@ -124,4 +124,44 @@ object Constants{
 
         return baseballNewsList
     }
+
+    fun getChampionsBasketball() : MutableList<ChampionsModel>{
+        val championsBasketballList = mutableListOf<ChampionsModel>()
+
+        val champion1 = ChampionsModel("1", "Luka Doncic", "")
+
+        championsBasketballList.add(champion1)
+
+        return championsBasketballList
+    }
+
+    fun getChampionsFootball() : MutableList<ChampionsModel>{
+        val championsFootballList = mutableListOf<ChampionsModel>()
+
+        val champion1 = ChampionsModel("1", "Football", "")
+
+        championsFootballList.add(champion1)
+
+        return championsFootballList
+    }
+
+    fun getChampionsTennis() : MutableList<ChampionsModel>{
+        val championsTennisList = mutableListOf<ChampionsModel>()
+
+        val champion1 = ChampionsModel("1", "Tennis", "")
+
+        championsTennisList.add(champion1)
+
+        return championsTennisList
+    }
+
+    fun getChampionsBaseball() : MutableList<ChampionsModel>{
+        val championsBaseball = mutableListOf<ChampionsModel>()
+
+        val champion1 = ChampionsModel("1", "Baseball", "")
+
+        championsBaseball.add(champion1)
+
+        return championsBaseball
+    }
 }
