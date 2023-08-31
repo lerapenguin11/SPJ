@@ -100,13 +100,13 @@ class AllNewsFragment : Fragment(), PageListener {
 
     private fun observeDataBaseball(position: Int){
         allNewsViewModel.getResultBaseball().observe(viewLifecycleOwner, Observer {baseball ->
-            binding.tvTitleTopNews.text = baseball.get(position).title
-            binding.tvDescTopNews.text = baseball.get(position).descTop
-            binding.tvTag1.text = baseball.get(position).tag
-            binding.tvTag2.text = baseball.get(position).tag
-            binding.tvNewsParagraph1.text = baseball.get(position).paragraph_1
-            binding.tvNewsParagraph2.text = baseball.get(position).paragraph_2
-            binding.tvNewsParagraph3.text = baseball.get(position).paragraph_3
+            binding.tvTitleTopNews.text = getString(baseball.get(position).title)
+            binding.tvDescTopNews.text = getString(baseball.get(position).descTop)
+            binding.tvTag1.text = getString(baseball.get(position).tag)
+            binding.tvTag2.text = getString(baseball.get(position).tag)
+            binding.tvNewsParagraph1.text = getString(baseball.get(position).paragraph_1)
+            binding.tvNewsParagraph2.text = getString(baseball.get(position).paragraph_2)
+            binding.tvNewsParagraph3.text = getString(baseball.get(position).paragraph_3)
             Glide.with(requireContext())
                 .load(baseball.get(position).iconTop)
                 .into(binding.icTopNews)
@@ -128,13 +128,13 @@ class AllNewsFragment : Fragment(), PageListener {
 
     private fun observeDataTennis(position: Int){
         allNewsViewModel.getResultTennis().observe(viewLifecycleOwner, Observer {tennis ->
-            binding.tvTitleTopNews.text = tennis.get(position).title
-            binding.tvDescTopNews.text = tennis.get(position).descTop
-            binding.tvTag1.text = tennis.get(position).tag
-            binding.tvTag2.text = tennis.get(position).tag
-            binding.tvNewsParagraph1.text = tennis.get(position).paragraph_1
-            binding.tvNewsParagraph2.text = tennis.get(position).paragraph_2
-            binding.tvNewsParagraph3.text = tennis.get(position).paragraph_3
+            binding.tvTitleTopNews.text = getString(tennis.get(position).title)
+            binding.tvDescTopNews.text = getString(tennis.get(position).descTop)
+            binding.tvTag1.text = getString(tennis.get(position).tag)
+            binding.tvTag2.text = getString(tennis.get(position).tag)
+            binding.tvNewsParagraph1.text = getString(tennis.get(position).paragraph_1)
+            binding.tvNewsParagraph2.text = getString(tennis.get(position).paragraph_2)
+            binding.tvNewsParagraph3.text = getString(tennis.get(position).paragraph_3)
             Glide.with(requireContext())
                 .load(tennis.get(position).iconTop)
                 .into(binding.icTopNews)
@@ -156,13 +156,13 @@ class AllNewsFragment : Fragment(), PageListener {
 
     private fun observeDataFootball(position: Int) {
         allNewsViewModel.getResultFootball().observe(viewLifecycleOwner, Observer {football ->
-            binding.tvTitleTopNews.text = football.get(position).title
-            binding.tvDescTopNews.text = football.get(position).descTop
-            binding.tvTag1.text = football.get(position).tag
-            binding.tvTag2.text = football.get(position).tag
-            binding.tvNewsParagraph1.text = football.get(position).paragraph_1
-            binding.tvNewsParagraph2.text = football.get(position).paragraph_2
-            binding.tvNewsParagraph3.text = football.get(position).paragraph_3
+            binding.tvTitleTopNews.text = getString(football.get(position).title)
+            binding.tvDescTopNews.text = getString(football.get(position).descTop)
+            binding.tvTag1.text = getString(football.get(position).tag)
+            binding.tvTag2.text = getString(football.get(position).tag)
+            binding.tvNewsParagraph1.text = getString(football.get(position).paragraph_1)
+            binding.tvNewsParagraph2.text = getString(football.get(position).paragraph_2)
+            binding.tvNewsParagraph3.text = getString(football.get(position).paragraph_3)
             Glide.with(requireContext())
                 .load(football.get(position).iconTop)
                 .into(binding.icTopNews)
@@ -184,13 +184,13 @@ class AllNewsFragment : Fragment(), PageListener {
 
     private fun observeDataBasketball(position : Int) {
         allNewsViewModel.getResultBasketball().observe(viewLifecycleOwner, Observer {basketball ->
-            binding.tvTitleTopNews.text = basketball.get(position).title
-            binding.tvDescTopNews.text = basketball.get(position).descTop
-            binding.tvTag1.text = basketball.get(position).tag
-            binding.tvTag2.text = basketball.get(position).tag
-            binding.tvNewsParagraph1.text = basketball.get(position).paragraph_1
-            binding.tvNewsParagraph2.text = basketball.get(position).paragraph_2
-            binding.tvNewsParagraph3.text = basketball.get(position).paragraph_3
+            binding.tvTitleTopNews.text = getString(basketball.get(position).title)
+            binding.tvDescTopNews.text = getString(basketball.get(position).descTop)
+            binding.tvTag1.text = getString(basketball.get(position).tag)
+            binding.tvTag2.text = getString(basketball.get(position).tag)
+            binding.tvNewsParagraph1.text = getString(basketball.get(position).paragraph_1)
+            binding.tvNewsParagraph2.text = getString(basketball.get(position).paragraph_2)
+            binding.tvNewsParagraph3.text = getString(basketball.get(position).paragraph_3)
             Glide.with(requireContext())
                 .load(basketball.get(position).iconTop)
                 .into(binding.icTopNews)

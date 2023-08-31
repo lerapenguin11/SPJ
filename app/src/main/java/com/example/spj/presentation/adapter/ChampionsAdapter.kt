@@ -28,7 +28,7 @@ class ChampionsAdapter : RecyclerView.Adapter<ChampionsAdapter.ChampionsViewHold
         val champions : ChampionsModel = championsList[position]
 
         holder.countTop.text = champions.countTop
-        holder.name.text = champions.name
+        holder.name.setText(champions.name)
         Glide.with(holder.itemView)
             .load(champions.flag)
             .override(92, 92)

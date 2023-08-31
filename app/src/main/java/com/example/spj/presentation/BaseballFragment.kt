@@ -52,13 +52,13 @@ class BaseballFragment : Fragment(), PageListener {
 
     private fun observeDataBaseball(position: Int) {
         allNewsViewModel.getResultBaseball().observe(viewLifecycleOwner, Observer {baseball ->
-            binding.tvTitleTopNews.text = baseball.get(position).title
-            binding.tvDescTopNews.text = baseball.get(position).descTop
-            binding.tvTag1.text = baseball.get(position).tag
-            binding.tvTag2.text = baseball.get(position).tag
-            binding.tvNewsParagraph1.text = baseball.get(position).paragraph_1
-            binding.tvNewsParagraph2.text = baseball.get(position).paragraph_2
-            binding.tvNewsParagraph3.text = baseball.get(position).paragraph_3
+            binding.tvTitleTopNews.text = getString(baseball.get(position).title)
+            binding.tvDescTopNews.text = getString(baseball.get(position).descTop)
+            binding.tvTag1.text = getString(baseball.get(position).tag)
+            binding.tvTag2.text = getString(baseball.get(position).tag)
+            binding.tvNewsParagraph1.text = getString(baseball.get(position).paragraph_1)
+            binding.tvNewsParagraph2.text = getString(baseball.get(position).paragraph_2)
+            binding.tvNewsParagraph3.text = getString(baseball.get(position).paragraph_3)
             Glide.with(requireContext())
                 .load(baseball.get(position).iconTop)
                 .into(binding.icTopNews)
